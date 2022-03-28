@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Острів - реєстрація</title>
+</head>
+<body>
+
+  <form method="post" action="Untitled-1.html">
+      <h1>Реєстрація</h1>
+    <div class="regist">
+      <p>
+      <label for="login"><b>Логін</b></label>
+      <input type="text" name="login" required>
+      </p>
+      <p>
+      <label for="psw"><b>Пароль</b></label>
+      <input type="password" name="psw" required>
+    </p>
+
+      <p>
+      <label for="psw-repeat"><b>Підтвердити пароль</b></label>
+      <input type="password" name="psw-repeat" required>
+    </p>
+
+      <p>
+      <label for="email"><b>Пошта</b></label>
+      <input type="text" name="email" required>
+    </p>
+    </div>
+      
+      <div>
+      <p><b>Стать</b></p>
+      <p>
+        <label>
+          <input type="radio" name="sex" value="Male"> Чоловіча
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="radio" name="sex" value="Female"> Жіноча
+        </label>
+      </p>
+
+
+        </select>
+      </div>  
+
+      <p>
+      <label for="tel-num"><b>Номер телефону</b></label>
+      <input type="tel" name="tel-num" required>
+    </p>
+
+      <p>
+      <label for="photo"><b>Аватар</b></label>
+      <input type="file" name="photo" multiple accept="image/*" required>
+    </p>
+
+      <div class="form-group">
+      <p>
+        <label for="message"><b>Біографія</b></label>
+        <textarea name="message" class="form-control" ></textarea>
+      </p>
+      </div>
+
+    <label for="conditions">Чи погоджуєтесь ви з <a href="#">умовами?</a></label>
+    <input name="conditions" type="checkbox"><br>
+
+    <div class="registerbtn">  
+      <p><button type="submit" >Зареєструватись</button></p>
+    </div>
+    <div class="singin">
+    <p><a href="Untitled-1.html">Увійти</a>.</p>
+    </dive>
+  </form>
+  
+  
+  </body>
+</html>
