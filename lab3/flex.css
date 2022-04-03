@@ -16,14 +16,14 @@ h1{
 } 
 
 .container{
-    justify-content: space-around;
+    justify-content: space-between;
     display: flex;
 }
 
 .blocks{
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 400px;
 }
 
 table{
