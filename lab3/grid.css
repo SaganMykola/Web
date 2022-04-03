@@ -8,6 +8,12 @@ h1{
     float: right;
 }
 
+.container{
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 400px 400px 300px;
+}
+
 .contents{
     display: grid;
     max-width: 85%;
@@ -21,7 +27,6 @@ h1{
 .additional{
     display: grid;
     justify-content: center;
-    grid-template-rows: 300px;
 }
 
 .additional input{
