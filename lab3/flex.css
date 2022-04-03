@@ -15,6 +15,17 @@ h1{
     max-width: 85%;
 } 
 
+.container{
+    justify-content: space-around;
+    display: flex;
+}
+
+.blocks{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
 table{
     max-width: 400px;
 }
