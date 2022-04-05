@@ -1,23 +1,30 @@
 h1{
     display: grid;
-    justify-content: center;
+    max-width: 85%;
+    justify-items: center;
 }
 
-.menu{
+#wrap{
     display: grid;
-    float: right;
+    grid-template-columns: 85% 10%;
+    grid-column-gap: 30px;
 }
 
 .container{
-    justify-content: space-between;
     display: grid;
-    grid-template-columns: 400px 400px 300px;
+    grid-template-columns: 300px 300px 300px;
+    grid-column-gap: 50px;
+}
+
+.container2{
+    max-width: 85%;
+    display: grid;
+    grid-template-rows: 300px;
 }
 
 .contents{
-    display: grid;
-    max-width: 85%;
     border: 2px solid black;
+    grid-row: 1;
 }
 
 .contents table{
@@ -26,11 +33,11 @@ h1{
 
 .additional{
     display: grid;
-    justify-content: center;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .additional input{
-    display: grid;
     width: 250px;
     height: 20px;
     margin: 20px 0;
@@ -38,6 +45,8 @@ h1{
 
 .footer{
     display: grid;
-    justify-content: center;
     background-color: rgba(219, 233, 233, 0.512);
+    max-width: 50%;
+    grid-column: 2;
+    grid-row: 2;
 }
