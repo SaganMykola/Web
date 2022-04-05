@@ -1,12 +1,17 @@
 h1{
     display: flex;
+    max-width: 85%;
     justify-content: center;
 }
 
 #wrap{
     flex-wrap: wrap;
     overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
+
 
 .contents{
     display: flex;
@@ -14,6 +19,10 @@ h1{
     flex-direction: column;
     max-width: 85%;
 } 
+
+.contents table{
+    max-width: 400px;
+}
 
 .container{
     justify-content: space-between;
@@ -26,22 +35,23 @@ h1{
     max-width: 400px;
 }
 
-table{
-    max-width: 400px;
+.container2{
+    max-width: 85%;
 }
 
-.menu{
+.additional{
     display: flex;
-    float: right;
-    flex-direction: column;
-}
-
-.additional ,[type=password], [type=text]{
-    display: flex;
-    margin: 20px 0;
+    justify-content: center;
   }
+
+.additional input{
+    width: 250px;
+    height: 20px;
+    margin: 20px 0;
+}
 
 .footer{
     display: flex;
+    justify-content: center;
     margin: 40px 35px;
 }
