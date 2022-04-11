@@ -1,0 +1,65 @@
+h1{
+    display: grid;
+    justify-content: center;
+}
+
+.menu{
+    display: grid;
+    float: right;
+}
+
+.contents{
+    display: grid;
+    max-width: 85%;
+    border: 2px solid black;
+}
+
+.contents table{
+    max-width: 400px;
+}
+
+.additional{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 300px;
+}
+
+.additional input{
+    display: grid;
+    width: 250px;
+    height: 20px;
+    margin: 20px 0;
+}
+
+.footer{
+    display: grid;
+    justify-content: center;
+    background-color: rgba(219, 233, 233, 0.512);
+}
+@media screen and  (max-width: 1000px) {
+    .contents{
+        font-size: 200%;
+        border: 0px;
+    }
+    .menu{
+        font-size: 200%;
+        float: none;
+    }
+
+    .menu input{
+        font-size: 100%;
+    }
+
+    button{
+        width: 100px;
+        height: 50px;
+    }
+
+    .additional ,[type=password], [type=text]{
+        justify-content: start;
+        font-size: 150%;
+    }
+    .footer{
+        justify-content: start;
+    }
+}

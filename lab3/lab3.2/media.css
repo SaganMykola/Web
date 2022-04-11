@@ -1,0 +1,133 @@
+h1{
+    display: grid;
+    max-width: 85%;
+    justify-items: center;
+}
+
+#wrap{
+    display: grid;
+    grid-template-columns: 85% 10%;
+    grid-column-gap: 30px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-column-gap: 50px;
+}
+
+button{
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(222, 203, 203);
+}
+
+.container2{
+    max-width: 85%;
+    display: grid;
+    grid-template-rows: 300px;
+}
+
+.contents{
+    border: 2px solid black;
+    grid-row: 1;
+    background-color: rgb(224, 219, 219);
+    animation-duration: 3s;
+    animation-name: color;
+}
+
+.contents table{
+    max-width: 400px;
+}
+
+.additional{
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.additional input{
+    width: 250px;
+    height: 20px;
+    margin: 20px 0;
+}
+
+.footer{
+    display: grid;
+    background-color: rgba(219, 233, 233, 0.512);
+    max-width: 50%;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+
+
+
+
+@media screen and  (max-width: 1000px) {
+    .contents{
+        font-size: 200%;
+        border: 0px;
+        grid-row: 2;
+    }
+
+    .menu{
+        font-size: 150%;
+        grid-row: 1;
+    }
+
+    .menu input{
+        font-size: 100%;
+    }
+
+    .menu button{
+        width: 100px;
+        height: 50px;
+    }
+
+    
+    .container{
+        display: grid;
+        grid-template-columns: none;
+    }
+
+    .container2{
+        display: grid;
+        grid-template-rows: 400px;
+    }
+
+
+    .additional ,[type=password], [type=text]{
+        font-size: 150%;
+        grid-column: 1;
+    }
+
+    .additional input{
+        width: 400px;
+        height: 50px;
+        margin: 20px 0;
+    }
+
+    .additional button{
+        height: 50px;
+        width: 100px;
+    }
+
+    .footer{
+        grid-column: 1;
+        width: 500px;
+    }
+}
+
+@keyframes color{
+    from{
+        background-color: white;
+    }
+    to{
+        background-color: rgb(224, 219, 219);
+    }
+}
