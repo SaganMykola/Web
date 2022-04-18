@@ -1,17 +1,43 @@
 h1{
     display: grid;
-    justify-content: center;
+    max-width: 85%;
+    justify-items: center;
 }
 
-.menu{
+#wrap{
     display: grid;
-    float: right;
+    grid-template-columns: 85% 10%;
+    grid-column-gap: 30px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-column-gap: 50px;
+}
+
+button{
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(222, 203, 203);
+}
+
+.container2{
+    max-width: 85%;
+    display: grid;
+    grid-template-rows: 300px;
 }
 
 .contents{
-    display: grid;
-    max-width: 85%;
     border: 2px solid black;
+    grid-row: 1;
+    background-color: rgb(224, 219, 219);
+    animation-duration: 3s;
+    animation-name: color;
 }
 
 .contents table{
@@ -20,12 +46,11 @@ h1{
 
 .additional{
     display: grid;
-    justify-content: center;
-    grid-template-rows: 300px;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .additional input{
-    display: grid;
     width: 250px;
     height: 20px;
     margin: 20px 0;
@@ -33,33 +58,8 @@ h1{
 
 .footer{
     display: grid;
-    justify-content: center;
     background-color: rgba(219, 233, 233, 0.512);
-}
-@media screen and  (max-width: 1000px) {
-    .contents{
-        font-size: 200%;
-        border: 0px;
-    }
-    .menu{
-        font-size: 200%;
-        float: none;
-    }
-
-    .menu input{
-        font-size: 100%;
-    }
-
-    button{
-        width: 100px;
-        height: 50px;
-    }
-
-    .additional ,[type=password], [type=text]{
-        justify-content: start;
-        font-size: 150%;
-    }
-    .footer{
-        justify-content: start;
-    }
+    max-width: 50%;
+    grid-column: 2;
+    grid-row: 2;
 }
