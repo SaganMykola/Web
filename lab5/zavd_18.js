@@ -47,5 +47,3 @@ class EmploymentCenterCollection{
     }
 }
 
-
-let employment = new EmploymentCenterCollection([]);
