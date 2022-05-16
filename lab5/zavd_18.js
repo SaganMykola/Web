@@ -23,7 +23,7 @@ class EmploymentCenterCollection{
         let date = new Date();
         let unemployed = []
         for (let i = 0; i < this.items.length; i++){
-            if (date.getFullYear() - this.items[i].year_of_birth >= 55)
+            if ((date.getFullYear() - this.items[i].year_of_birth >= 55 && this.items[i].sex == "Жіноча") || (date.getFullYear() - this.items[i].year_of_birth >= 60 && this.items[i].sex == "Чоловіча"))
                 unemployed.push(this.items[i])
         }
         return unemployed
