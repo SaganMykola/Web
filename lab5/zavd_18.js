@@ -29,8 +29,13 @@ class EmploymentCenterCollection{
         return unemployed
     }
 
-    Add(user){
-        this.items.push(user);
+    add(employment){
+        this.items.push(employment);
+    }
+
+    addCollection(employments){
+        for (let i = 0; i < employments.length; i++)
+            this.items.push(employments[i])
     }
 
     update(code, newEmployment){
