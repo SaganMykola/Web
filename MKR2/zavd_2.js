@@ -45,7 +45,7 @@ class MusicAlbumCollection{
 class MusicAlbumCollectionToHTML extends MusicAlbumCollection{
     constructor(items){
         super(items);
-        this.mount(parent)
+        this.mount(this._parent)
     }
 
 
@@ -66,37 +66,8 @@ class MusicAlbumCollectionToHTML extends MusicAlbumCollection{
     }
 }
 
-let music1 = new MusicAlbum(
-    1,
-    "da",
-    "da",
-    "da",
-    "da",
-    "da",
-    23
-)
 
-let music2 = new MusicAlbum(
-    2,
-    "net",
-    "net",
-    "net",
-    "net",
-    "net",
-    42
-)
-
-let music3 = new MusicAlbum(
-    3,
-    "da",
-    "da",
-    "net",
-    "da",
-    "net",
-    50
-)
-
-let collection = new MusicAlbumCollection([music1, music2, music3]);
+let collection = new MusicAlbumCollection([]);
 
 
 collection.mount(document.getElementById("album"))
