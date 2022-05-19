@@ -183,7 +183,7 @@ class EmploymentCenterCollectionHtml extends EmploymentCenterCollection{
     }
 }
 
-let employment = new EmploymentCenterCollectionHtml([]);
+let employment = new EmploymentCenterCollectionHtml();
 
 document.getElementById("find-by-code").onclick = () => {
     employment.mount(document.getElementById("root"), document.getElementById("input-code").value);
