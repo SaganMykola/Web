@@ -183,10 +183,12 @@ class EmploymentCenterCollectionHtml extends EmploymentCenterCollection{
     }
 }
 
+
+
 let employment = new EmploymentCenterCollectionHtml();
 
 document.getElementById("find-by-code").onclick = () => {
-    employment.mount(document.getElementById("root"), document.getElementById("input-code").value);
+    employment.mount(document.getElementById("table"), document.getElementById("input-code").value);
 }
 
 document.getElementById("open-add").onclick = () =>{
@@ -200,7 +202,7 @@ document.getElementById("open-adds").onclick = () =>{
         document.body.append(div);
         document.getElementById(`input-${i}`).innerHTML = employment.addEmploymentsToHTML();
     }
-    document.getElementById(`input-${document.getElementById("number").value-1}`).innerHTML += `<br><button type="button" onclick="AddNewEmployments()">Зберегти</button><br>`
+    document.getElementById(`input-${document.getElementById("number").value - 1}`).innerHTML += `<br><button type="button" onclick="AddNewEmployments()">Зберегти</button><br>`
    
 }
 
@@ -294,6 +296,33 @@ function AddNewEmployments() {
                 }
             )
         )
-    }
-        
+    }     
+}
+
+function getByRequest() {
+    let date = new Date()
+    let unemployed = `<table border="1" cellpadding="3">
+    <tr>
+        <td>Код</td>
+        <td>Прізвище і ініціали</td>
+        <td>Стать</td>
+        <td>Рік народження</td>
+        <td>Освіта</td>
+        <td>Спеціальність</td>
+        <td>Дата прийняття на облік</td>
+    </tr>`
+    for (let i = 0; i < employment.items.length; i++){
+        if ((date.getFullYear() - employment.items[i].year_of_birth >= 55 && employment.items[i].sex == "Жіноча") || (date.getFullYear() - employment.items[i].year_of_birth >= 60 && employment.items[i].sex == "Чоловіча"))
+            unemployed += `<tr>
+            <td>${employment.items[i].code}</td>
+	        <td>${employment.items[i].name}</td>
+            <td>${employment.items[i].sex}</td>
+            <td>${employment.items[i].year_of_birth}</td>
+            <td>${employment.items[i].education}</td>
+            <td>${employment.items[i].specialty}</td>
+            <td>${employment.items[i].date_of_reg}</td>
+	    </tr>`         
+    } 
+    
+    document.getElementById("unemployed").innerHTML = unemployed;
 }
